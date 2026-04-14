@@ -156,6 +156,7 @@ func processRoot(root string, out *os.File, seen map[string]struct{}) error {
 		if _, err := fmt.Fprintf(out, "%s\t%s\n", slug, link); err != nil {
 			return err
 		}
+		fmt.Printf("found link %s for %s\n", link, slug)
 		seen[slug] = struct{}{}
 
 	}
