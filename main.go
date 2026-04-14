@@ -142,6 +142,7 @@ func processRoot(root string, out *os.File, seen map[string]struct{}) error {
 			continue
 		}
 
+		fmt.Printf("checking %s\n", slug)
 		slugDir := filepath.Join(root, slug)
 		link, err := findLinks(slugDir)
 		if err != nil {
